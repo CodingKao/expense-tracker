@@ -18,6 +18,8 @@ Filter your expenses and income by categories, making it easy to analyze and man
 
 ## Technologies Used
 
+- JavaScript
+
 - React
 
 - Node.js
