@@ -1,26 +1,21 @@
-const express = require('express');
+const express = require('express')
 const cors = require('cors');
 const { db } = require('./db/db');
-const app = express();
+const app = express()
 
-require('dotenv').config();
+require('dotenv').config()
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT
 
-// middleware
-app.use(express.json());
-app.use(cors());
-
-
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-});
+//middlewares
+app.use(express.json())
+app.use(cors())
 
 const server = () => {
-    db();
+    db()
     app.listen(PORT, () => {
-        console.log('You are listening on port:', PORT);
-    });
-};
+        console.log('listening to port:', PORT)
+    })
+}
 
-server();
+server()
